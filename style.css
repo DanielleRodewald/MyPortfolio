@@ -1,0 +1,365 @@
+:root {
+    --text-color:#8669dd;
+    --dark-one: #333;
+    --dark-two: #7a7a7a;
+    --main-color: #784cfb;
+    --light-one: #fff;
+    --light-two: #f9fafb;
+    --light-three: #f6f7fb; 
+  }
+
+  *,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+    font-family: "Casanova";
+    src: url("images/Casanova.otf");
+}
+@font-face {
+    font-family: "Oregon";
+    src: url("images/Oregon.ttf");
+}
+body{
+    margin: 0;
+  padding: 0;
+    background-color: #9581d1;
+}
+body, button, input, textarea {
+    font-family: "Poppins", sans-serif;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #784cfb;
+    color: var(--light-one);
+    border-radius: 32px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background-color: #6b44e0;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 16px;
+    line-height: 1;
+    font-size: 45px;
+    margin-bottom: 10px;
+    font-family: "Casanova";
+  }
+  
+  .title:before {
+    content: attr(data-title);
+    display: block;
+    margin-bottom: 6px;
+    color: #5033a7;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  
+  .title:after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: #784cfb;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+/* Nav bar */
+nav { 
+    background-color: #313030; 
+    width: 100%; 
+    padding-bottom: 20px; 
+    position: fixed; 
+    z-index: 999; 
+}
+
+.container1 {
+    position: relative;
+    z-index: 5;
+    max-width: 1470px;
+    padding: 0 65px;
+    margin: 0 auto;
+  }
+
+.links ul {
+  display: flex;
+  list-style: none;
+}
+
+.links a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 180px;
+  font-weight: 600;
+  font-size: 25px;
+  color: var(--text-color);
+  font-family: "Casanova";
+  letter-spacing: 2px;
+}
+
+.links a:hover {
+  color: rgba(57, 6, 243, 0.979);
+  font-weight: 800;
+}
+/* Nav bar end */
+
+/* Header start */
+.header-content{
+    background-image: url(images/coffee.jpg);
+    background-size: cover;
+    border-radius: 3%;
+    max-width: 1300px;
+    max-height: 550px;
+    margin: 40px auto;
+}
+.header-content .container1.grid-2 {
+  min-height: calc(100vh - 96px);
+  padding-bottom: 16px;
+  margin-left: 90px;
+}
+
+.header-title {
+  font-size: 60px;
+  line-height: 0.8;
+  color:#373737;
+  font-family: "Casanova";
+}
+
+.header-content .text {
+  margin: 35px 0;
+  color:#373737c4;
+  font-family: "Casanova";
+  font-size: 30px;
+  
+}
+
+.header-img {
+    border: #8669dd 10px solid;
+    /* border-image: linear-gradient(#833cf6, #380c9f) 30;  */
+    border-radius: 50%;
+    margin-right: 50px;
+    margin-top: -100px;
+} 
+
+.header-img:after {
+    border-radius: 50%;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: .3fr 1.3fr 1fr;
+    /* grid-template-columns: repeat(3, 1fr); */
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    }
+      
+.text {
+    font-size: 20px;
+    color: var(--dark-two);
+    line-height: 1.6;
+    }
+/* Header end */
+
+/* Projects */
+.container {
+    position: relative;
+    z-index: 5;
+    max-width: 1472px;
+    padding: 0 64px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+
+.blog-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.blog-wrap {
+  position: relative;
+  margin: 21px 8px;
+}
+
+.blog-card {
+  max-width: 420px;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--light-two);
+  position: relative;
+  border-radius: 5%;
+}
+
+.blog-content {
+  padding:20px;
+}
+
+.blog-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px auto;
+}
+
+.blog-info h5 {
+  color: var(--main-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+.project-title {
+  margin-right: 32px;
+  font-family: "Oregon";
+}
+
+.project-description {
+  margin: 8px 0 24px 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.blog-card:hover {
+  transform: translateY(-15px);
+}
+
+.blog-card:hover:after {
+  height: 8px;
+}
+
+.blog-img {
+    margin: 0 auto;
+    text-align: center;
+    width: 420px;
+  
+}
+/* End Projects */
+
+/* Contact */
+  
+  .contact-box {
+    background-color: var(--light-one);
+    width: 1200px;
+    margin: 60px auto;
+    border-radius: 45px;
+    padding: 88px 72px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .contact-info {
+    padding-right: 32px;
+  }
+  
+  .contact-form {
+    padding-left: 32px;
+  }
+  
+  .contact-info .title:after {
+    left: 0;
+    transform: initial;
+  }
+  
+  .information-wrap {
+    margin-top: 32px;
+  }
+  
+  .information {
+    display: flex;
+    align-items: center;
+  }
+  
+  .information:not(:last-child) {
+    margin-bottom: 21px;
+  }
+  
+  .contact-icon {
+    min-width: 67px;
+    height: 67px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    color: var(--light-one);
+    text-align: center;
+    font-size: 22px;
+    margin-right: 16px;
+  } 
+  
+  .contact-icon i {
+    line-height: 67px;
+  }
+  
+  .info-text {
+    font-size: 21px;
+    display: inline-block;
+  }
+  
+  .contact-form .title:after {
+    display: none;
+  }
+  
+  .contact-form .title {
+    margin: 0;
+  }
+  
+  .contact-form .row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    grid-column-gap: 10px;
+  }
+  
+  .contact-input {
+    padding: 19px 34px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    background: #e9e7e7;
+    border-radius: 64px;
+    font-weight: 600;
+    font-size: 20px;
+    transition: 0.3s;
+  }
+  
+  .contact-input::placeholder {
+    font-weight: 400;
+  }
+  
+  .contact-input.textarea {
+    resize: none;
+    min-height: 280px;
+    border-radius: 32px;
+  }
+  
+  .contact-input .btn {
+    margin-top: 10px;
+  }
+  
+  /* End Contact */
